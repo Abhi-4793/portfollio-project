@@ -42,11 +42,18 @@
   --primary-white: #fff;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255,255,255, 0);
+   --primary-red:  #ef4035;
+   --primary-hover-red: #f33501;
+
 }
 body {
-  font-family: "Roboto condensed" sans-serif;
+  font-family: "Roboto condensed", sans-serif;
 }
 /*************************************************navabr*******/
+nav {
+  z-index: 2;
+}
+
 .logo {
   width: 8.25rem;
 }
@@ -72,9 +79,99 @@ nav ul li {
   height: 6rem;
 
 }
+
+@media screen and (max-width: 768px) {
+ .navbar-brand {
+   width:7rem;
+ }
+}
 .navbar-nav > li > a.active, .navbar-nav > li > a:focus {
   border-top: 0.1875rem solid var(--primary-orange) ;
 }
 .navbar-nav > li >a:hover {
   border-top: 0.1875rem solid var(--primary-orange);
+}
+/*************************Header*********************/
+ 
+.header-wraper {
+  position: relative;
+  background: url(wp8411187-coffee-laptop-wallpapers.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* opacity: 0.7; */
+  /* filter: blur(2px);
+  -webkit-filter: blur(2px); */
+
+
+}
+.main-info{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  position: absolute ;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto condensed" , sans-serif;
+  z-index: 1;
+}
+.main-info h1 {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/**************Typed*******************/
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+@media screen and (max-width: 768px) {
+  .main-info h1 {
+    font-size: 1.7rem !important;
+  }
+  .typed-text{
+    font-size: 1.3rem !important;
+  }
+}
+
+
+ /***************Header Main offer button ********************/
+.btn-main-offer{
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 10px 12px 12px 12px;
+
+color: var(--primary-white);
+margin: 2 rem ;
+}
+.btn-main-offer:hover{
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  color: var(--primary-white);
+  transition: .2s ease-in-out;
+
+}
+
+
+ /***************Particles********************/
+ .tsparticles-canvas-el {
+   position: absolute;
+   height: 100vh;
+   width: 100vw;
+   z-index: 1;
+
+
+ }
+@media screen and (max-width: 768px) {
+  .particles-canvas{
+    display: none;
+  }
 }
